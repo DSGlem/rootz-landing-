@@ -1,0 +1,152 @@
+
+$font-primary: 'Poppins', sans-serif;
+
+$color-background-primary: #ffffff;
+$color-background-secondary: #F7F3F4;
+$color-background-accent: #FFBD9E;
+
+$color-primary: #000000;
+$color-primary-dark: #1E1A20;
+$color-primary-light: #807C7C;
+
+$color-secondary: #333333;
+
+$color-accent: #222433;
+$color-accent-secondary: #1E1A20;
+
+$color-btn-primary: #FFFFFF;
+$color-btn-secondary: #F2726C;
+
+
+html {
+    font-family: $font-primary;
+    font-size: 10px;
+    color: $color-primary;
+}
+
+//global styles
+a {
+    text-decoration: none;
+}
+ol {
+    margin-left: 0;
+    li {
+        list-style: none;
+    }
+}
+
+//utilities
+.ut-max-width {
+    max-width: 1280px;
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+.image-wrapper {
+    img {
+        width: 100%;
+    }
+}
+
+// header
+header {
+    background-color: $color-background-secondary;
+}
+
+.header-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    color: $color-primary;
+    height: 10.7rem;
+    border-bottom: 4px solid $color-accent;
+    .logo {
+        display: flex;
+        align-items: center;
+        .image-wrapper {
+            width: 11.1rem;
+            height: 3.7rem;
+        }
+    }
+    nav {
+        display: flex;
+        align-items: center;
+    }
+    ol {
+        padding-left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        // display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(10rem,1fr));
+    }
+    li {
+        width: 25%;
+        text-align: center;
+    }
+    a {
+        font-size: 1.6rem;
+        opacity: 0.8;
+        color: inherit;
+        transition: 0.3s;
+        &:hover{
+            font-weight: bold;
+        }
+    }
+}
+
+.functional-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.btn-mobile-menu {
+    width: 2.2rem;
+    height: 1.7rem;
+    margin: 0;
+    padding: 0;
+    background-color: inherit;
+    border: none;
+}
+
+.btn-apply {
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding: 1.3rem 4.8rem;
+    border-radius: 4rem;
+    background-color: $color-btn-primary;
+}
+
+
+
+
+
+
+main {
+    background-color: $color-background-primary;
+}
+
+
+
+
+
+
+
+.title {
+    color: $color-secondary;
+}
+
+.hashtag {
+    color: $color-primary-light;
+    span {
+        color: $color-primary;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .btn-mobile-menu {
+        display: none;
+    }
+}

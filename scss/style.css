@@ -1,0 +1,148 @@
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol {
+  margin-left: 0;
+}
+
+ol li {
+  list-style: none;
+}
+
+.ut-max-width {
+  max-width: 1280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 20px;
+}
+
+.image-wrapper img {
+  width: 100%;
+}
+
+header {
+  background-color: #F7F3F4;
+}
+
+.header-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr 1fr;
+      grid-template-columns: 1fr 3fr 1fr;
+  color: #000000;
+  height: 10.7rem;
+  border-bottom: 4px solid #222433;
+}
+
+.header-wrapper .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-wrapper .logo .image-wrapper {
+  width: 11.1rem;
+  height: 3.7rem;
+}
+
+.header-wrapper nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-wrapper ol {
+  padding-left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.header-wrapper li {
+  width: 25%;
+  text-align: center;
+}
+
+.header-wrapper a {
+  font-size: 1.6rem;
+  opacity: 0.8;
+  color: inherit;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header-wrapper a:hover {
+  font-weight: bold;
+}
+
+.functional-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.btn-mobile-menu {
+  width: 2.2rem;
+  height: 1.7rem;
+  margin: 0;
+  padding: 0;
+  background-color: inherit;
+  border: none;
+}
+
+.btn-apply {
+  font-weight: bold;
+  font-size: 1.6rem;
+  padding: 1.3rem 4.8rem;
+  border-radius: 4rem;
+  background-color: #FFFFFF;
+}
+
+main {
+  background-color: #ffffff;
+}
+
+.title {
+  color: #333333;
+}
+
+.hashtag {
+  color: #807C7C;
+}
+
+.hashtag span {
+  color: #000000;
+}
+
+@media (min-width: 1024px) {
+  .btn-mobile-menu {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
