@@ -40,7 +40,9 @@ ol {
     max-width: 1280px;
     display: flex;
     justify-content: center;
-    margin: 0 20px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .image-wrapper {
@@ -69,7 +71,7 @@ header {
         }
     }
     nav {
-        display: flex;
+        display: none;
         align-items: center;
     }
     ol {
@@ -101,7 +103,7 @@ header {
     justify-content: flex-end;
 }
 
-.btn-mobile-menu {
+.mobile-menu-btn {
     width: 2.2rem;
     height: 1.7rem;
     margin: 0;
@@ -111,20 +113,30 @@ header {
 }
 
 .btn-apply {
+    display: none;
     font-weight: bold;
     font-size: 1.6rem;
     padding: 1.3rem 4.8rem;
     border-radius: 4rem;
     background-color: $color-btn-primary;
+    transition: 0.3s;
+    &:hover {
+        background-color: $color-primary;
+        color: $color-background-primary;
+    }
 }
 
 
 
-
-
-
+//main
 main {
     background-color: $color-background-primary;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr;
+
 }
 
 
@@ -146,7 +158,14 @@ main {
 
 
 @media (min-width: 1024px) {
-    .btn-mobile-menu {
+    .mobile-menu-btn {
         display: none;
+    }
+    .btn-apply {
+        display: inline;
+    }
+
+    .header-wrapper nav {
+        display: flex;
     }
 }
