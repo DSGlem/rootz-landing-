@@ -17,7 +17,7 @@ $color-accent-secondary: #1E1A20;
 $color-btn-primary: #FFFFFF;
 $color-btn-secondary: #F2726C;
 
-$main-padding: 20px;
+$main-padding: 18px;
 
 
 html {
@@ -45,12 +45,23 @@ ol {
 .ut-main-padding {
     padding: 0 $main-padding;
 }
+.ut-list-style-none {
+    margin: 0;
+    padding: 0;
+    li {
+        list-style: none;
+    }
+}
 
 .image-wrapper {
     img {
         width: 100%;
+        height: 100%;
         object-fit: cover;
     }
+}
+.object-right {
+    object-position: right;
 }
 
 // header
@@ -157,6 +168,8 @@ main {
 }
 .headline-image{
     width: 90vw;
+    max-width: 542.72px;
+    max-height: 292.74px;
 }
 .search-field {
     display: flex;
@@ -164,6 +177,8 @@ main {
     position: relative;
     width: 90.5vw;
     height: 17vw;
+    max-width: 339px;
+    max-height: 64px;
     border-radius: 15vw;
     background-color: $color-btn-primary;
 }
@@ -173,9 +188,13 @@ main {
     left: 6vw;
     width: 3.75vw;
     height: 5.35vw;
+    max-width: 14px;
+    max-height: 20px;
 }
 .search-input {
     padding: 0 30vw 0 14vw;
+    max-width: 151px;
+    max-height: 24px;
     font-size: 1.4rem;
     color: $color-primary-light;
     input {
@@ -192,6 +211,8 @@ main {
     color: $color-btn-primary;
     width: 26.8vw;
     height: 12.8vw;
+    max-width: 100px;
+    max-height: 48px;
     border-radius: 10vw;
     text-align: center;
     line-height: 12.8vw;
@@ -223,24 +244,34 @@ main {
 }
 .parrot {
     width: 122vw;
+    max-width: 458.44px;
+    max-height: 565px;
 }
 
 .members-background {
     position: absolute;
     width: 57.5vw;
+    max-width: 272px;
+    max-height: 320px;
     bottom: 25vw;
     left: -21vw;
 }
 .member-icon {
     position: absolute;
     width: 8.5vw;
+    max-width: 48px;
+    max-height: 56px;
     top: 9.5vw;
     left: 8vw;
+    left: 30px;
+    top: 35px;
 }
 .members-count {
     position: absolute;
-    left: 8vw;
-    bottom: 7.5vw;
+    // left: 8vw;
+    // bottom: 7.5vw;
+    left: 30px;
+    bottom: 28px;
     .title {
         color: $color-btn-primary;
         margin: 0;
@@ -257,7 +288,7 @@ main {
 
 //news section
 .news {
-    background-color: $color-background-secondary;
+    background-color: $color-btn-primary;
     display: grid;
     grid-template-columns: 1fr;
     padding-top: 14vw;
@@ -265,25 +296,166 @@ main {
 .article {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    padding-top: 50px;
     .photo {
         width: 30vw;
         height: 30vw;
     }
     .info {
-        margin-left: 7.5vw;
+        margin-left: 30px;
+        margin-right: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .title {
+            font-size: 1.4rem;
+            font-weight:bold;
+            p {
+                margin: 0px;
+            }
+        }
+        .see-more {
+            color: $color-primary-light;
+            font-size: 1.2rem;
+            a {
+                color: inherit;
+                text-decoration: underline;
+            }
+        }
     }
 }
 .hashtag {
     font-size: 1.2rem;
     font-weight: 500;
+    color: $color-primary-light;
+    p {
+        margin: 0px;
+    }
     span {
+        color: $color-primary-dark;
         margin-right: 0.5rem;
     }
 }
 
+//quote section
+.person {
+    max-width: 42px;
+    max-height: 42px;
+    width: 11vw;
+    height: 11vw;
+}
+.budget {
+    max-width: 40px;
+    max-height: 40px;
+    width: 10.5vw;
+    height: 10.5vw;
+}
+.machine {
+    max-width: 32px;
+    max-height: 40px;
+    width: 8.5vw;
+    height: 10.5vw;
+}
+.quote {
+    padding-top: 300px;
+    .title {
+        z-index: 1;
+        font-size: 2.4rem;
+        font-weight:bold;
+        text-align: center;
+        color: $color-primary-dark;
+        line-height: 1.75em;
+        &:before {
+            z-index: 0;
+            content:"";
+            position: absolute;
+            bottom: -68px;
+            max-width: 400px;
+            max-height: 400px;
+            width: 62.5vw;
+            height: 62.5vw;
+            border-radius: 100%;
+            background: linear-gradient(180deg, #F7F3F4 26.49%, rgba(247, 243, 244, 0) 100%);
+        }
+        &:after {
+            content:"";
+            margin-top: 33px;
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: $color-accent;
+        }
+    }
+    li {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    li:last-child{
+        margin-top: 34px;
+    }
+    .wrapper {
+        margin-top: 64px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .image-title {
+        font-size: 1.3rem;
+        letter-spacing: 0.1rem;
+        line-height: 2rem;
+        color: $color-secondary;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 24px;
+        margin-bottom: 0;
+    }
+}
 
-
-
+.decoration {
+    z-index: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.gradient-moon {
+    z-index: 0;
+    position: absolute;
+    top: -68px;
+    max-width: 400px;
+    max-height: 400px;
+    width: 62.5vw;
+    height: 62.5vw;
+    border-radius: 100%;
+    background: linear-gradient(180deg, #F7F3F4 26.49%, rgba(247, 243, 244, 0) 100%);
+}
+.foliage-left {
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    transform: rotate(39.29deg);
+    max-width: 130px;
+    max-height: 400px;
+    width: 17.25vw;
+    height: 53.25vw;
+    // width: 34.5vw;
+    // height: 106.5vw;
+}
+.foliage-right {
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+    transform: rotate(-39.29deg);
+    max-width: 162px;
+    max-height: 400px;
+    width: 21.5vw;
+    height: 53.25vw;
+    // width: 43vw;
+    // height: 106.5vw;
+}
 
 
 .title {
@@ -293,7 +465,7 @@ main {
 .hashtag {
     color: $color-primary-light;
     span {
-        color: $color-primary;
+        color: $color-primary-dark;
     }
 }
 

@@ -22,13 +22,28 @@ ol li {
 }
 
 .ut-main-padding {
-  padding: 0 20px;
+  padding: 0 18px;
+}
+
+.ut-list-style-none {
+  margin: 0;
+  padding: 0;
+}
+
+.ut-list-style-none li {
+  list-style: none;
 }
 
 .image-wrapper img {
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-right {
+  -o-object-position: right;
+     object-position: right;
 }
 
 header {
@@ -167,6 +182,8 @@ main {
 
 .headline-image {
   width: 90vw;
+  max-width: 542.72px;
+  max-height: 292.74px;
 }
 
 .search-field {
@@ -179,6 +196,8 @@ main {
   position: relative;
   width: 90.5vw;
   height: 17vw;
+  max-width: 339px;
+  max-height: 64px;
   border-radius: 15vw;
   background-color: #FFFFFF;
 }
@@ -191,10 +210,14 @@ main {
   left: 6vw;
   width: 3.75vw;
   height: 5.35vw;
+  max-width: 14px;
+  max-height: 20px;
 }
 
 .search-input {
   padding: 0 30vw 0 14vw;
+  max-width: 151px;
+  max-height: 24px;
   font-size: 1.4rem;
   color: #807C7C;
 }
@@ -213,6 +236,8 @@ main {
   color: #FFFFFF;
   width: 26.8vw;
   height: 12.8vw;
+  max-width: 100px;
+  max-height: 48px;
   border-radius: 10vw;
   text-align: center;
   line-height: 12.8vw;
@@ -237,8 +262,8 @@ main {
       -ms-flex-pack: start;
           justify-content: flex-start;
   overflow-x: hidden;
-  margin-right: -20px;
-  margin-left: -20px;
+  margin-right: -18px;
+  margin-left: -18px;
 }
 
 .hero-image {
@@ -250,11 +275,15 @@ main {
 
 .parrot {
   width: 122vw;
+  max-width: 458.44px;
+  max-height: 565px;
 }
 
 .members-background {
   position: absolute;
   width: 57.5vw;
+  max-width: 272px;
+  max-height: 320px;
   bottom: 25vw;
   left: -21vw;
 }
@@ -262,14 +291,18 @@ main {
 .member-icon {
   position: absolute;
   width: 8.5vw;
+  max-width: 48px;
+  max-height: 56px;
   top: 9.5vw;
   left: 8vw;
+  left: 30px;
+  top: 35px;
 }
 
 .members-count {
   position: absolute;
-  left: 8vw;
-  bottom: 7.5vw;
+  left: 30px;
+  bottom: 28px;
 }
 
 .members-count .title {
@@ -287,7 +320,7 @@ main {
 }
 
 .news {
-  background-color: #F7F3F4;
+  background-color: #FFFFFF;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -300,6 +333,7 @@ main {
   display: grid;
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
+  padding-top: 50px;
 }
 
 .article .photo {
@@ -308,16 +342,201 @@ main {
 }
 
 .article .info {
-  margin-left: 7.5vw;
+  margin-left: 30px;
+  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.article .info .title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.article .info .title p {
+  margin: 0px;
+}
+
+.article .info .see-more {
+  color: #807C7C;
+  font-size: 1.2rem;
+}
+
+.article .info .see-more a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 .hashtag {
   font-size: 1.2rem;
   font-weight: 500;
+  color: #807C7C;
+}
+
+.hashtag p {
+  margin: 0px;
 }
 
 .hashtag span {
+  color: #1E1A20;
   margin-right: 0.5rem;
+}
+
+.person {
+  max-width: 42px;
+  max-height: 42px;
+  width: 11vw;
+  height: 11vw;
+}
+
+.budget {
+  max-width: 40px;
+  max-height: 40px;
+  width: 10.5vw;
+  height: 10.5vw;
+}
+
+.machine {
+  max-width: 32px;
+  max-height: 40px;
+  width: 8.5vw;
+  height: 10.5vw;
+}
+
+.quote {
+  padding-top: 300px;
+}
+
+.quote .title {
+  z-index: 1;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: center;
+  color: #1E1A20;
+  line-height: 1.75em;
+}
+
+.quote .title:before {
+  z-index: 0;
+  content: "";
+  position: absolute;
+  bottom: -68px;
+  max-width: 400px;
+  max-height: 400px;
+  width: 62.5vw;
+  height: 62.5vw;
+  border-radius: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(26.49%, #F7F3F4), to(rgba(247, 243, 244, 0)));
+  background: linear-gradient(180deg, #F7F3F4 26.49%, rgba(247, 243, 244, 0) 100%);
+}
+
+.quote .title:after {
+  content: "";
+  margin-top: 33px;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #222433;
+}
+
+.quote li {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.quote li:last-child {
+  margin-top: 34px;
+}
+
+.quote .wrapper {
+  margin-top: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.quote .image-title {
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+  color: #333333;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+.decoration {
+  z-index: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gradient-moon {
+  z-index: 0;
+  position: absolute;
+  top: -68px;
+  max-width: 400px;
+  max-height: 400px;
+  width: 62.5vw;
+  height: 62.5vw;
+  border-radius: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(26.49%, #F7F3F4), to(rgba(247, 243, 244, 0)));
+  background: linear-gradient(180deg, #F7F3F4 26.49%, rgba(247, 243, 244, 0) 100%);
+}
+
+.foliage-left {
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+  -webkit-transform: rotate(39.29deg);
+          transform: rotate(39.29deg);
+  max-width: 130px;
+  max-height: 400px;
+  width: 17.25vw;
+  height: 53.25vw;
+}
+
+.foliage-right {
+  position: absolute;
+  bottom: -25px;
+  right: 0;
+  -webkit-transform: rotate(-39.29deg);
+          transform: rotate(-39.29deg);
+  max-width: 162px;
+  max-height: 400px;
+  width: 21.5vw;
+  height: 53.25vw;
 }
 
 .title {
@@ -329,7 +548,7 @@ main {
 }
 
 .hashtag span {
-  color: #000000;
+  color: #1E1A20;
 }
 
 @media (min-width: 1024px) {
