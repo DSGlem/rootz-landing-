@@ -17,6 +17,8 @@ $color-accent-secondary: #1E1A20;
 $color-btn-primary: #FFFFFF;
 $color-btn-secondary: #F2726C;
 
+$main-padding: 20px;
+
 
 html {
     font-family: $font-primary;
@@ -38,16 +40,16 @@ ol {
 //utilities
 .ut-max-width {
     max-width: 1280px;
-    display: flex;
-    justify-content: center;
     margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
+}
+.ut-main-padding {
+    padding: 0 $main-padding;
 }
 
 .image-wrapper {
     img {
         width: 100%;
+        object-fit: cover;
     }
 }
 
@@ -60,7 +62,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     color: $color-primary;
-    height: 10.7rem;
+    height: 10rem;
     border-bottom: 4px solid $color-accent;
     .logo {
         display: flex;
@@ -73,6 +75,7 @@ header {
     nav {
         display: none;
         align-items: center;
+        height: 100%;
     }
     ol {
         padding-left: 0;
@@ -131,14 +134,152 @@ header {
 //main
 main {
     background-color: $color-background-primary;
+    overflow: hidden;
 }
 
-.hero {
+//headline section
+.headline {
+    background-color: $color-background-secondary;
+    padding-top: 70px;
     display: grid;
     grid-template-columns: 1fr;
-
+    .description {
+        font-size: 1.5rem;
+        color: black;
+        line-height: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+            font-weight: 500;
+        }
+    }
+}
+.headline-image{
+    width: 90vw;
+}
+.search-field {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 90.5vw;
+    height: 17vw;
+    border-radius: 15vw;
+    background-color: $color-btn-primary;
+}
+.map-point {
+    position: absolute;
+    display: flex;
+    left: 6vw;
+    width: 3.75vw;
+    height: 5.35vw;
+}
+.search-input {
+    padding: 0 30vw 0 14vw;
+    font-size: 1.4rem;
+    color: $color-primary-light;
+    input {
+        font-size: 1.4rem;
+        width: 100%;
+        color: inherit;
+        border: none;
+    }
+}
+.search-btn {
+    position: absolute;
+    right: 2.5vw;
+    background-color: $color-btn-secondary;
+    color: $color-btn-primary;
+    width: 26.8vw;
+    height: 12.8vw;
+    border-radius: 10vw;
+    text-align: center;
+    line-height: 12.8vw;
+    button {
+        color: inherit;
+        background-color: inherit;
+        border: none;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
 }
 
+//hero section
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    margin-right: -$main-padding;
+    margin-left: -$main-padding;
+}
+.hero-image{
+    position: relative;
+    width: 100%;
+    top: 0;
+    right: -25.5vw;
+}
+.parrot {
+    width: 122vw;
+}
+
+.members-background {
+    position: absolute;
+    width: 57.5vw;
+    bottom: 25vw;
+    left: -21vw;
+}
+.member-icon {
+    position: absolute;
+    width: 8.5vw;
+    top: 9.5vw;
+    left: 8vw;
+}
+.members-count {
+    position: absolute;
+    left: 8vw;
+    bottom: 7.5vw;
+    .title {
+        color: $color-btn-primary;
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    .count {
+        color: $color-btn-primary;
+        margin: 0;
+        font-size: 4rem;
+        font-weight: 600;
+    }
+}
+
+//news section
+.news {
+    background-color: $color-background-secondary;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 14vw;
+}
+.article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    .photo {
+        width: 30vw;
+        height: 30vw;
+    }
+    .info {
+        margin-left: 7.5vw;
+    }
+}
+.hashtag {
+    font-size: 1.2rem;
+    font-weight: 500;
+    span {
+        margin-right: 0.5rem;
+    }
+}
 
 
 
