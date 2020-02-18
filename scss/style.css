@@ -25,6 +25,10 @@ ol li {
   padding: 0 18px;
 }
 
+.ut-padding-footer {
+  padding: 0 20px;
+}
+
 .ut-list-style-none {
   margin: 0;
   padding: 0;
@@ -152,7 +156,8 @@ main {
 }
 
 .headline {
-  background-color: #F7F3F4;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(83%, #F7F3F4), color-stop(17%, transparent));
+  background: linear-gradient(to bottom, #F7F3F4 83%, transparent 17%);
   padding-top: 70px;
   display: -ms-grid;
   display: grid;
@@ -415,26 +420,13 @@ main {
 }
 
 .quote .title {
+  position: relative;
   z-index: 1;
   font-size: 2.4rem;
   font-weight: bold;
   text-align: center;
   color: #1E1A20;
   line-height: 1.75em;
-}
-
-.quote .title:before {
-  z-index: 0;
-  content: "";
-  position: absolute;
-  bottom: -68px;
-  max-width: 400px;
-  max-height: 400px;
-  width: 62.5vw;
-  height: 62.5vw;
-  border-radius: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(26.49%, #F7F3F4), to(rgba(247, 243, 244, 0)));
-  background: linear-gradient(180deg, #F7F3F4 26.49%, rgba(247, 243, 244, 0) 100%);
 }
 
 .quote .title:after {
@@ -537,6 +529,80 @@ main {
   max-height: 400px;
   width: 21.5vw;
   height: 53.25vw;
+}
+
+footer {
+  background-color: #F7F3F4;
+  margin-top: 100px;
+}
+
+.footer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 46px;
+  padding-bottom: 43px;
+}
+
+.footer-wrapper .title {
+  font-size: 1.8rem;
+  line-height: 1.8em;
+  font-weight: bold;
+}
+
+.contacts {
+  width: 100%;
+  color: #333333;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.contacts .title {
+  margin: 0;
+  color: inherit;
+  font-size: 2.8rem;
+  line-height: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.headquarters address {
+  width: 80%;
+  font-size: 1.2rem;
+  line-height: 2em;
+  font-style: normal;
+}
+
+.social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.social-media-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.social-media-icon {
+  display: block;
+  width: 8.5vw;
+  height: 8.5vw;
+  max-width: 32px;
+  max-height: 32px;
 }
 
 .title {

@@ -18,7 +18,7 @@ $color-btn-primary: #FFFFFF;
 $color-btn-secondary: #F2726C;
 
 $main-padding: 18px;
-
+$footer-padding: 20px;
 
 html {
     font-family: $font-primary;
@@ -44,6 +44,9 @@ ol {
 }
 .ut-main-padding {
     padding: 0 $main-padding;
+}
+.ut-padding-footer {
+    padding: 0 $footer-padding;
 }
 .ut-list-style-none {
     margin: 0;
@@ -150,7 +153,7 @@ main {
 
 //headline section
 .headline {
-    background-color: $color-background-secondary;
+    background: linear-gradient(to bottom, $color-background-secondary 83%, transparent 17%);
     padding-top: 70px;
     display: grid;
     grid-template-columns: 1fr;
@@ -359,24 +362,13 @@ main {
 .quote {
     padding-top: 300px;
     .title {
+        position: relative;
         z-index: 1;
         font-size: 2.4rem;
         font-weight:bold;
         text-align: center;
         color: $color-primary-dark;
         line-height: 1.75em;
-        &:before {
-            z-index: 0;
-            content:"";
-            position: absolute;
-            bottom: -68px;
-            max-width: 400px;
-            max-height: 400px;
-            width: 62.5vw;
-            height: 62.5vw;
-            border-radius: 100%;
-            background: linear-gradient(180deg, #F7F3F4 26.49%, rgba(247, 243, 244, 0) 100%);
-        }
         &:after {
             content:"";
             margin-top: 33px;
@@ -456,6 +448,64 @@ main {
     // width: 43vw;
     // height: 106.5vw;
 }
+
+//footer
+footer {
+    background-color: $color-background-secondary;
+    margin-top: 100px;
+}
+.footer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 46px;
+    padding-bottom: 43px;
+    .title {
+        font-size: 1.8rem;
+        line-height: 1.8em;
+        font-weight: bold;
+    }
+}
+
+.contacts {
+    width: 100%;
+    color: $color-secondary;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    .title {
+        margin: 0;
+        color: inherit;
+        font-size: 2.8rem;
+        line-height: 1.5em;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+.headquarters {
+    address {
+        width: 80%;
+        font-size: 1.2rem;
+        line-height: 2em;
+        font-style: normal;
+    }
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+}
+.social-media-links {
+    display: flex;
+    justify-content: space-between
+}
+.social-media-icon {
+    display: block;
+    width: 8.5vw;
+    height: 8.5vw;
+    max-width: 32px;
+    max-height: 32px;
+}
+
 
 
 .title {
