@@ -166,9 +166,14 @@ main {
 }
 
 .headline .description {
+  margin-top: 1.8em;
   font-size: 1.5rem;
   color: black;
   line-height: 32px;
+  font-weight: 500;
+}
+
+.nature {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -181,10 +186,6 @@ main {
           align-items: center;
 }
 
-.headline .description p {
-  font-weight: 500;
-}
-
 .headline-image {
   width: 90vw;
   max-width: 542.72px;
@@ -192,35 +193,35 @@ main {
 }
 
 .search-field {
+  margin-top: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  width: 90.5vw;
-  height: 17vw;
-  max-width: 339px;
-  max-height: 64px;
-  border-radius: 15vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 0 0.9em;
+  border-radius: 3em;
   background-color: #FFFFFF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .map-point {
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  left: 6vw;
-  width: 3.75vw;
-  height: 5.35vw;
-  max-width: 14px;
-  max-height: 20px;
+  width: 1.4em;
+  height: 2em;
+  margin-left: 1.5em;
 }
 
 .search-input {
-  padding: 0 30vw 0 14vw;
+  padding: 1.6em 0 1.6em 0;
   max-width: 151px;
   max-height: 24px;
   font-size: 1.4rem;
@@ -230,43 +231,31 @@ main {
 .search-input input {
   font-size: 1.4rem;
   width: 100%;
+  outline: none;
   color: inherit;
   border: none;
 }
 
 .search-btn {
-  position: absolute;
-  right: 2.5vw;
-  background-color: #F2726C;
-  color: #FFFFFF;
-  width: 26.8vw;
-  height: 12.8vw;
-  max-width: 100px;
-  max-height: 48px;
-  border-radius: 10vw;
-  text-align: center;
-  line-height: 12.8vw;
-}
-
-.search-btn button {
-  color: inherit;
-  background-color: inherit;
-  border: none;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
   font-size: 1.2rem;
   font-weight: 500;
+  padding: 1.5em 2em;
+  border-radius: 2em;
+  letter-spacing: 1px;
+  background-color: #F2726C;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  border: none;
 }
 
 .hero {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  overflow-x: hidden;
+  overflow: hidden;
   margin-right: -18px;
   margin-left: -18px;
 }
@@ -275,22 +264,30 @@ main {
   position: relative;
   width: 100%;
   top: 0;
-  right: -25.5vw;
+  right: 0;
 }
 
 .parrot {
-  width: 122vw;
+  position: relative;
+  top: 0;
+  right: -9.5rem;
   max-width: 458.44px;
-  max-height: 565px;
+  width: 130%;
+}
+
+.members-wrapper {
+  position: absolute;
+  left: -18%;
+  bottom: 60%;
 }
 
 .members-background {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 57.5vw;
   max-width: 272px;
   max-height: 320px;
-  bottom: 25vw;
-  left: -21vw;
 }
 
 .member-icon {
@@ -617,6 +614,12 @@ footer {
   color: #1E1A20;
 }
 
+@media (max-width: 374px) {
+  html {
+    font-size: 8px;
+  }
+}
+
 @media (min-width: 1024px) {
   .mobile-menu-btn {
     display: none;
@@ -628,6 +631,21 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .headline {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .news {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .footer-wrapper {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .contacts {
+    width: unset;
   }
 }
 /*# sourceMappingURL=style.css.map */
