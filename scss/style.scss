@@ -148,13 +148,12 @@ header {
 
 //main
 main {
-    background-color: $color-background-primary;
+    background: linear-gradient(to bottom, $color-background-secondary 83%, transparent 17%);
     overflow: hidden;
 }
 
 //headline section
 .headline {
-    background: linear-gradient(to bottom, $color-background-secondary 83%, transparent 17%);
     padding-top: 70px;
     display: grid;
     grid-template-columns: 1fr;
@@ -228,6 +227,8 @@ main {
     margin-left: -$main-padding;
 }
 .hero-image{
+    display: flex;
+    justify-content: flex-end;
     position: relative;
     width: 100%;
     top: 0;
@@ -236,40 +237,36 @@ main {
 .parrot {
     position: relative;
     top: 0;
-    right: -9.5rem;
-    max-width: 458.44px;
-    width: 130%;
+    right: -18rem;
+    img {
+        width: 45.8em;
+        max-width: 458.44px;
+    }
 }
 
 .members-wrapper {
     position: absolute;
-    left: -18%;
-    bottom: 60%;
+    right: 14em;
+    bottom: 9.3em;
 }
 .members-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 57.5vw;
+    position: relative;
+    width: 21.6em;
     max-width: 272px;
     max-height: 320px;
 }
 .member-icon {
     position: absolute;
-    width: 8.5vw;
+    top: 3.5em;
+    left: 3em;
+    width: 3.2em;
     max-width: 48px;
     max-height: 56px;
-    top: 9.5vw;
-    left: 8vw;
-    left: 30px;
-    top: 35px;
 }
 .members-count {
     position: absolute;
-    // left: 8vw;
-    // bottom: 7.5vw;
-    left: 30px;
-    bottom: 28px;
+    bottom: 2.8em;
+    left: 3em;
     .title {
         color: $color-btn-primary;
         margin: 0;
@@ -289,19 +286,19 @@ main {
     background-color: $color-btn-primary;
     display: grid;
     grid-template-columns: 1fr;
-    padding-top: 14vw;
+    padding-bottom: 10em;
 }
 .article {
     display: grid;
     grid-template-columns: 1fr 2fr;
     padding-top: 50px;
     .photo {
-        width: 30vw;
-        height: 30vw;
+        width: 11.2em;
+        height: 11.2em;
     }
     .info {
-        margin-left: 30px;
-        margin-right: 10px;
+        margin-left: 3em;
+        margin-right: 1.2em;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -532,6 +529,10 @@ footer {
     }
     .headline {
         grid-template-columns: 1fr 1fr;
+    }
+    //headline
+    .hero {
+        overflow: unset;
     }
 
     //news

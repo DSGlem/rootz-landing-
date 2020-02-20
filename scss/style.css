@@ -151,13 +151,12 @@ header {
 }
 
 main {
-  background-color: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(83%, #F7F3F4), color-stop(17%, transparent));
+  background: linear-gradient(to bottom, #F7F3F4 83%, transparent 17%);
   overflow: hidden;
 }
 
 .headline {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(83%, #F7F3F4), color-stop(17%, transparent));
-  background: linear-gradient(to bottom, #F7F3F4 83%, transparent 17%);
   padding-top: 70px;
   display: -ms-grid;
   display: grid;
@@ -261,6 +260,12 @@ main {
 }
 
 .hero-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   position: relative;
   width: 100%;
   top: 0;
@@ -270,41 +275,40 @@ main {
 .parrot {
   position: relative;
   top: 0;
-  right: -9.5rem;
+  right: -18rem;
+}
+
+.parrot img {
+  width: 45.8em;
   max-width: 458.44px;
-  width: 130%;
 }
 
 .members-wrapper {
   position: absolute;
-  left: -18%;
-  bottom: 60%;
+  right: 14em;
+  bottom: 9.3em;
 }
 
 .members-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 57.5vw;
+  position: relative;
+  width: 21.6em;
   max-width: 272px;
   max-height: 320px;
 }
 
 .member-icon {
   position: absolute;
-  width: 8.5vw;
+  top: 3.5em;
+  left: 3em;
+  width: 3.2em;
   max-width: 48px;
   max-height: 56px;
-  top: 9.5vw;
-  left: 8vw;
-  left: 30px;
-  top: 35px;
 }
 
 .members-count {
   position: absolute;
-  left: 30px;
-  bottom: 28px;
+  bottom: 2.8em;
+  left: 3em;
 }
 
 .members-count .title {
@@ -327,7 +331,7 @@ main {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  padding-top: 14vw;
+  padding-bottom: 10em;
 }
 
 .article {
@@ -339,13 +343,13 @@ main {
 }
 
 .article .photo {
-  width: 30vw;
-  height: 30vw;
+  width: 11.2em;
+  height: 11.2em;
 }
 
 .article .info {
-  margin-left: 30px;
-  margin-right: 10px;
+  margin-left: 3em;
+  margin-right: 1.2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -635,6 +639,9 @@ footer {
   .headline {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+  }
+  .hero {
+    overflow: unset;
   }
   .news {
     -ms-grid-columns: 1fr 1fr 1fr;
