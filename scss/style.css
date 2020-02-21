@@ -151,9 +151,12 @@ header {
 }
 
 main {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(83%, #F7F3F4), color-stop(17%, transparent));
-  background: linear-gradient(to bottom, #F7F3F4 83%, transparent 17%);
-  overflow: hidden;
+  background: #ffffff;
+}
+
+.headline-wrapper {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(83%, #F7F3F4), color-stop(0%, transparent));
+  background: linear-gradient(to bottom, #F7F3F4 83%, transparent 0%);
 }
 
 .headline {
@@ -325,6 +328,10 @@ main {
   font-weight: 600;
 }
 
+.news-wrapper {
+  background-color: #ffffff;
+}
+
 .news {
   background-color: #FFFFFF;
   display: -ms-grid;
@@ -395,29 +402,30 @@ main {
   margin-right: 0.5rem;
 }
 
-.person {
-  max-width: 42px;
-  max-height: 42px;
-  width: 11vw;
-  height: 11vw;
+.card {
+  background-color: #FFBD9E;
+  width: 100%;
 }
 
-.budget {
-  max-width: 40px;
-  max-height: 40px;
-  width: 10.5vw;
-  height: 10.5vw;
+.card .title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  line-height: 1.5em;
+  text-transform: capitalize;
 }
 
-.machine {
-  max-width: 32px;
-  max-height: 40px;
-  width: 8.5vw;
-  height: 10.5vw;
+.card .description {
+  font-size: 1.5rem;
+  line-height: 1.25em;
+}
+
+.quote-wrapper {
+  background-color: #ffffff;
 }
 
 .quote {
-  padding-top: 300px;
+  padding-top: 270px;
+  overflow-x: hidden;
 }
 
 .quote .title {
@@ -484,7 +492,7 @@ main {
   margin-bottom: 0;
 }
 
-.decoration {
+.quote .decoration {
   z-index: 0;
   position: relative;
   display: -webkit-box;
@@ -493,6 +501,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
 }
 
 .gradient-moon {
@@ -532,12 +541,33 @@ main {
   height: 53.25vw;
 }
 
-footer {
-  background-color: #F7F3F4;
-  margin-top: 100px;
+.person {
+  max-width: 42px;
+  max-height: 42px;
+  width: 11vw;
+  height: 11vw;
+}
+
+.budget {
+  max-width: 40px;
+  max-height: 40px;
+  width: 10.5vw;
+  height: 10.5vw;
+}
+
+.machine {
+  max-width: 32px;
+  max-height: 40px;
+  width: 8.5vw;
+  height: 10.5vw;
 }
 
 .footer-wrapper {
+  background-color: #F7F3F4;
+}
+
+.footer {
+  margin-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -550,7 +580,7 @@ footer {
   padding-bottom: 43px;
 }
 
-.footer-wrapper .title {
+.footer .title {
   font-size: 1.8rem;
   line-height: 1.8em;
   font-weight: bold;

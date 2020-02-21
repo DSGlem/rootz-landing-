@@ -148,11 +148,14 @@ header {
 
 //main
 main {
-    background: linear-gradient(to bottom, $color-background-secondary 83%, transparent 17%);
-    overflow: hidden;
+    background: $color-background-primary;
 }
 
 //headline section
+
+.headline-wrapper{
+    background: linear-gradient(to bottom, $color-background-secondary 83%, transparent 0%);
+}
 .headline {
     padding-top: 70px;
     display: grid;
@@ -282,6 +285,9 @@ main {
 }
 
 //news section
+.news-wrapper{
+    background-color: $color-background-primary;
+}
 .news {
     background-color: $color-btn-primary;
     display: grid;
@@ -332,27 +338,32 @@ main {
     }
 }
 
+//card
+.cards-wrapper {
+
+}
+.card {
+    background-color: $color-background-accent;
+    width: 100%;
+    .title {
+        font-size: 2.8rem;
+        font-weight: bold;
+        line-height: 1.5em;
+        text-transform: capitalize;
+    }
+    .description {
+        font-size: 1.5rem;
+        line-height: 1.25em
+    }
+}
+
 //quote section
-.person {
-    max-width: 42px;
-    max-height: 42px;
-    width: 11vw;
-    height: 11vw;
-}
-.budget {
-    max-width: 40px;
-    max-height: 40px;
-    width: 10.5vw;
-    height: 10.5vw;
-}
-.machine {
-    max-width: 32px;
-    max-height: 40px;
-    width: 8.5vw;
-    height: 10.5vw;
+.quote-wrapper {
+    background-color: $color-background-primary;
 }
 .quote {
-    padding-top: 300px;
+    padding-top: 270px;
+    overflow-x: hidden;
     .title {
         position: relative;
         z-index: 1;
@@ -397,14 +408,15 @@ main {
         margin-top: 24px;
         margin-bottom: 0;
     }
+    .decoration {
+        z-index: 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
 }
 
-.decoration {
-    z-index: 0;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
 .gradient-moon {
     z-index: 0;
     position: absolute;
@@ -440,13 +452,31 @@ main {
     // width: 43vw;
     // height: 106.5vw;
 }
+.person {
+    max-width: 42px;
+    max-height: 42px;
+    width: 11vw;
+    height: 11vw;
+}
+.budget {
+    max-width: 40px;
+    max-height: 40px;
+    width: 10.5vw;
+    height: 10.5vw;
+}
+.machine {
+    max-width: 32px;
+    max-height: 40px;
+    width: 8.5vw;
+    height: 10.5vw;
+}
 
 //footer
-footer {
-    background-color: $color-background-secondary;
-    margin-top: 100px;
-}
 .footer-wrapper {
+    background-color: $color-background-secondary;
+}
+.footer {
+    margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -517,6 +547,11 @@ footer {
     }
 }
 @media (min-width: 1024px) {
+    // main {
+    //     background: linear-gradient(to bottom, $color-background-secondary 30%, transparent 17%);
+    //     overflow: hidden;
+    // }
+
     .mobile-menu-btn {
         display: none;
     }
