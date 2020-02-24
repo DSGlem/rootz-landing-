@@ -152,6 +152,7 @@ header {
 
 main {
   background: #ffffff;
+  overflow: hidden;
 }
 
 .headline-wrapper {
@@ -160,20 +161,18 @@ main {
 }
 
 .headline {
-  padding-top: 70px;
+  padding-top: 7em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  overflow: hidden;
 }
 
 .headline .description {
   margin-top: 1.8em;
   font-size: 1.5rem;
   color: black;
-  line-height: 32px;
-  font-weight: 500;
+  line-height: 2em;
 }
 
 .nature {
@@ -184,9 +183,9 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .headline-image {
@@ -285,6 +284,7 @@ main {
 .parrot img {
   width: 45.8em;
   max-width: 458.44px;
+  max-height: 565px;
 }
 
 .members-wrapper {
@@ -425,10 +425,28 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #FFBD9E;
-  width: calc(100% - 8.6em);
+  width: 100%;
   padding: 4em 4.3em 0 4.3em;
   border-radius: 2em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.card .info {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .card .title {
@@ -444,29 +462,32 @@ main {
   color: #1E1A20;
   font-size: 1.5rem;
   line-height: 1.75em;
+  margin-top: 2rem;
 }
 
 .card .decoration {
+  margin-top: 2.5rem;
   position: relative;
+  width: 27.2em;
   height: 31em;
 }
 
 .card .main-decoration, .card .secondary-decoration {
-  position: relative;
+  position: absolute;
   width: 27.2em;
   height: 43.2em;
   background-color: white;
-  border-radius: 3em;
+  border-top-left-radius: 3em;
+  border-top-right-radius: 3em;
 }
 
 .card .main-decoration {
-  left: -1.3em;
+  left: -2.4rem;
 }
 
 .card .secondary-decoration {
-  position: absolute;
-  top: 6.4em;
-  right: -1.3em;
+  left: 2.5rem;
+  top: 6.5rem;
   opacity: 0.5;
 }
 
@@ -475,8 +496,17 @@ main {
 }
 
 .quote {
-  padding-top: 270px;
-  overflow-x: hidden;
+  padding-top: 370px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .quote .title {
@@ -521,6 +551,7 @@ main {
 }
 
 .quote .wrapper {
+  position: relative;
   margin-top: 64px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -717,16 +748,122 @@ main {
     display: -ms-flexbox;
     display: flex;
   }
+  .headline-wrapper {
+    background-color: #F7F3F4;
+  }
   .headline {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+    padding-bottom: 13rem;
+  }
+  .nature {
+    padding: 6em 0 0 8em;
+  }
+  .nature .description, .nature .search-field {
+    width: 80%;
+  }
+  .nature .description {
+    font-size: 1.6em;
+    margin-top: 3.7em;
+    margin-bottom: 1.5em;
+  }
+  .search-btn {
+    padding-left: 3em;
+    padding-right: 3em;
   }
   .hero {
     overflow: unset;
   }
+  .parrot {
+    right: 5rem;
+  }
+  .members-wrapper {
+    left: 11.5em;
+    bottom: -2.5em;
+  }
+  .members-background {
+    width: 27em;
+    height: 32em;
+  }
+  .member-icon {
+    top: 3em;
+    width: 5.2em;
+  }
+  .members-count {
+    bottom: 4em;
+  }
+  .members-count .title {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+  }
+  .members-count .count {
+    font-size: 5.6rem;
+  }
+  .cards-wrapper {
+    padding: 9em 0 9em 0;
+  }
+  .cards {
+    width: 69%;
+  }
+  .cards .flickity-prev-next-button {
+    display: block;
+    background: none;
+    width: 66px;
+    height: 66px;
+  }
+  .cards .flickity-prev-next-button.next {
+    right: -11rem;
+  }
+  .cards .flickity-prev-next-button.previous {
+    left: -11rem;
+  }
+  .cards .title {
+    font-size: 4rem;
+    line-height: 1.4em;
+  }
+  .cards .description {
+    margin-top: 2em;
+    font-size: 1.8rem;
+    line-height: 1.8em;
+  }
+  .card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    padding: 6rem 9rem 0 8rem;
+  }
+  .card .info {
+    margin-top: 3.5rem;
+    width: 46%;
+  }
+  .card .decoration {
+    height: 43rem;
+  }
   .quote .title {
     font-size: 5rem;
     line-height: 1.3;
+  }
+  .quote .wrapper {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .quote li {
+    width: auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .news {
     -ms-grid-columns: 1fr 1fr 1fr;

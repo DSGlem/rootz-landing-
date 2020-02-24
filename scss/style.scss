@@ -149,6 +149,7 @@ header {
 //main
 main {
     background: $color-background-primary;
+    overflow: hidden;
 }
 
 //headline section
@@ -157,22 +158,21 @@ main {
     background: linear-gradient(to bottom, $color-background-secondary 83%, transparent 0%);
 }
 .headline {
-    padding-top: 70px;
+    padding-top: 7em;
     display: grid;
     grid-template-columns: 1fr;
-    overflow: hidden;
+
     .description {
         margin-top: 1.8em;
         font-size: 1.5rem;
         color: black;
-        line-height: 32px;
-        font-weight: 500;
+        line-height: 2em;
     }
 }
 .nature {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 .headline-image{
     width: 90vw;
@@ -245,6 +245,7 @@ main {
     img {
         width: 45.8em;
         max-width: 458.44px;
+        max-height: 565px;
     }
 }
 
@@ -360,10 +361,17 @@ main {
 .card {
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: $color-background-accent;
-    width: calc(100% - 8.6em);
+    width: 100%;
     padding: 4em 4.3em 0 4.3em;
     border-radius: 2em;
+    box-sizing: border-box;
+    .info {
+        flex-direction: column;
+        display: flex;
+        align-items: flex-start;
+    }
     .title {
         color: $color-accent;
         margin: 0;
@@ -375,27 +383,30 @@ main {
     .description {
         color: $color-accent-secondary;
         font-size: 1.5rem;
-        line-height: 1.75em
+        line-height: 1.75em;
+        margin-top: 2rem;
     }
     .decoration {
+        margin-top: 2.5rem;
         position: relative;
+        width:  27.2em;
         height: 31em;
     }
 
     .main-decoration, .secondary-decoration {
-        position: relative;
+        position: absolute;
         width:  27.2em;
         height: 43.2em;
         background-color: white;
-        border-radius: 3em;
+        border-top-left-radius: 3em;
+        border-top-right-radius: 3em
     }
     .main-decoration {
-        left: -1.3em;
+        left: -2.4rem;
     }
     .secondary-decoration {
-        position: absolute;
-        top: 6.4em;
-        right: -1.3em;
+        left: 2.5rem;
+        top: 6.5rem;
         opacity: 0.5;
     }
 
@@ -407,8 +418,10 @@ main {
     background-color: $color-background-primary;
 }
 .quote {
-    padding-top: 270px;
-    overflow-x: hidden;
+    padding-top: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     .title {
         position: relative;
         z-index: 1;
@@ -438,6 +451,7 @@ main {
         margin-top: 34px;
     }
     .wrapper {
+        position: relative;
         margin-top: 64px;
         display: flex;
         flex-wrap: wrap;
@@ -592,11 +606,7 @@ main {
     }
 }
 @media (min-width: 1024px) {
-    // main {
-    //     background: linear-gradient(to bottom, $color-background-secondary 30%, transparent 17%);
-    //     overflow: hidden;
-    // }
-
+    //header
     .mobile-menu-btn {
         display: none;
     }
@@ -607,14 +617,105 @@ main {
     .header-wrapper nav {
         display: flex;
     }
+
+
+    //headline
+    .headline-wrapper {
+        background-color: $color-background-secondary;
+    }
     .headline {
         grid-template-columns: 1fr 1fr;
+        padding-bottom: 13rem;
     }
-    //headline
+    .nature {
+        padding: 6em 0 0 8em;
+        .description, .search-field {
+            width: 80%;
+        }
+        .description {
+            font-size: 1.6em;
+            margin-top: 3.7em;
+            margin-bottom: 1.5em;
+        }
+    }
+    .search-btn {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
     .hero {
         overflow: unset;
     }
+    .parrot {
+        right: 5rem;
+    }
+    .members-wrapper {
+        left: 11.5em;
+        bottom: -2.5em;
+    }
+    .members-background {
+        width: 27em;
+        height: 32em;
+    }
+    .member-icon {
+        top: 3em;
+        width: 5.2em;
+    }
+    .members-count {
+        bottom: 4em;
+        .title {
+            font-size: 2rem;
+            margin-bottom: 0.5em;
+        }
+        .count {
+            font-size: 5.6rem;
+        }
+    }
 
+
+    //slider
+    .cards-wrapper {
+        padding: 9em 0 9em 0;
+    }
+    .cards {
+        width: 69%;
+        .flickity-prev-next-button {
+            display: block;
+            background: none;
+            width: 66px;
+            height: 66px;
+        }
+        .flickity-prev-next-button.next {
+            right: -11rem;
+        }
+        .flickity-prev-next-button.previous {
+            left: -11rem;
+        }
+        .title {
+            font-size: 4rem;
+            line-height: 1.4em;
+        }
+        .description {
+            margin-top: 2em;
+            font-size: 1.8rem;
+            line-height: 1.8em;
+        }
+    }
+    .card {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        transition: 0.3s;
+        padding: 6rem 9rem 0 8rem;
+        .info {
+            margin-top: 3.5rem;
+            width: 46%;
+        }
+        .decoration {
+            height: 43rem;
+        }
+        
+    }
 
 
     //quote 
@@ -623,7 +724,20 @@ main {
             font-size: 5rem;
             line-height: 1.3;
         }
+        .wrapper {
+            flex-wrap: nowrap;
+            justify-content: space-around;
+        }
+        li {
+            width: auto;
+            flex-direction: row;
+        }
+        .image-title {
+            
+        }
     }
+
+
     //news
     .news {
         grid-template-columns: 1fr 1fr 1fr;
@@ -636,5 +750,7 @@ main {
     .contacts {
         width: unset;
     }
+
+
 
 }
