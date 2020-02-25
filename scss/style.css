@@ -337,16 +337,16 @@ main {
   background-color: #FFFFFF;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  -ms-grid-columns: (minmax(32rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
   padding-bottom: 10em;
 }
 
 .article {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
   padding-top: 50px;
 }
 
@@ -468,17 +468,17 @@ main {
 .card .decoration {
   margin-top: 2.5rem;
   position: relative;
-  width: 27.2em;
-  height: 31em;
+  width: 27.2rem;
+  height: 31rem;
 }
 
 .card .main-decoration, .card .secondary-decoration {
   position: absolute;
-  width: 27.2em;
-  height: 43.2em;
+  width: 27.2rem;
+  height: 43.2rem;
   background-color: white;
-  border-top-left-radius: 3em;
-  border-top-right-radius: 3em;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
 }
 
 .card .main-decoration {
@@ -496,7 +496,7 @@ main {
 }
 
 .quote {
-  padding-top: 370px;
+  padding-top: 270px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -521,10 +521,10 @@ main {
 
 .quote .title:after {
   content: "";
-  margin-top: 33px;
+  margin-top: 3.3rem;
   display: block;
   width: 100%;
-  height: 3px;
+  height: 0.3rem;
   background-color: #222433;
 }
 
@@ -584,43 +584,37 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  top: -20.5rem;
+  left: 0;
 }
 
 .gradient-moon {
   z-index: 0;
   position: absolute;
-  top: -68px;
-  max-width: 400px;
-  max-height: 400px;
-  width: 62.5vw;
-  height: 62.5vw;
+  top: -6.8rem;
+  width: 23.4rem;
+  height: 23.4rem;
   border-radius: 100%;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(26.49%, #F7F3F4), to(rgba(247, 243, 244, 0)));
   background: linear-gradient(180deg, #F7F3F4 26.49%, rgba(247, 243, 244, 0) 100%);
 }
 
-.foliage-left {
-  position: absolute;
-  bottom: -35px;
-  left: 0;
-  -webkit-transform: rotate(39.29deg);
-          transform: rotate(39.29deg);
-  max-width: 130px;
-  max-height: 400px;
-  width: 17.25vw;
-  height: 53.25vw;
+.foliage-left, .foliage-right {
+  display: none;
 }
 
-.foliage-right {
+.foliage-left-small {
   position: absolute;
-  bottom: -25px;
-  right: 0;
-  -webkit-transform: rotate(-39.29deg);
-          transform: rotate(-39.29deg);
-  max-width: 162px;
-  max-height: 400px;
-  width: 21.5vw;
-  height: 53.25vw;
+  bottom: 1.5rem;
+  left: -1.7rem;
+  width: 13.2rem;
+}
+
+.foliage-right-small {
+  position: absolute;
+  bottom: 1.5rem;
+  right: -1.7rem;
+  width: 13.2rem;
 }
 
 .person {
@@ -684,11 +678,18 @@ main {
   text-transform: uppercase;
 }
 
+.contacts .description {
+  font-size: 1.2rem;
+  line-height: 2em;
+  letter-spacing: 0.3px;
+}
+
 .headquarters address {
   width: 80%;
   font-size: 1.2rem;
   line-height: 2em;
   font-style: normal;
+  letter-spacing: 0.3px;
 }
 
 .social-media {
@@ -736,6 +737,26 @@ main {
   }
 }
 
+@media (min-width: 768px) {
+  .quote .decoration {
+    top: -11.5rem;
+  }
+  .contacts {
+    width: unset;
+  }
+  .headline {
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+  }
+  .hero, .nature {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  .hero {
+    overflow: unset;
+  }
+}
+
 @media (min-width: 1024px) {
   .mobile-menu-btn {
     display: none;
@@ -773,13 +794,14 @@ main {
   }
   .hero {
     overflow: unset;
+    min-width: 60rem;
   }
   .parrot {
     right: 5rem;
   }
   .members-wrapper {
-    left: 11.5em;
-    bottom: -2.5em;
+    right: 29em;
+    bottom: -3em;
   }
   .members-background {
     width: 27em;
@@ -804,6 +826,9 @@ main {
   }
   .cards {
     width: 69%;
+  }
+  .cards .flickity-page-dots {
+    display: none;
   }
   .cards .flickity-prev-next-button {
     display: block;
@@ -834,23 +859,36 @@ main {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-transition: 0.3s;
     transition: 0.3s;
-    padding: 6rem 9rem 0 8rem;
+    padding: 0 8rem 0 8rem;
   }
   .card .info {
-    margin-top: 3.5rem;
     width: 46%;
   }
   .card .decoration {
+    margin-top: 7.5rem;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     height: 43rem;
   }
   .quote .title {
     font-size: 5rem;
-    line-height: 1.3;
+    line-height: 1.3em;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 70%;
+  }
+  .quote .title::after {
+    width: 82%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 0.4rem;
+    margin-top: 6.3rem;
   }
   .quote .wrapper {
     -ms-flex-wrap: nowrap;
@@ -865,16 +903,58 @@ main {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .news {
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+  .quote .decoration {
+    top: -66.5rem;
   }
-  .footer-wrapper {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+  .quote .image-title {
+    margin-top: 0;
+    margin-left: 1rem;
   }
-  .contacts {
-    width: unset;
+  .foliage-left-small, .foliage-right-small {
+    display: none;
+  }
+  .foliage-left, .foliage-right {
+    display: block;
+    position: absolute;
+  }
+  .foliage-left {
+    top: 22.1rem;
+    left: 0;
+    width: 13rem;
+    height: 40rem;
+  }
+  .foliage-right {
+    top: 21.5rem;
+    right: -1.5rem;
+    width: 16rem;
+    height: 40rem;
+  }
+  .gradient-moon {
+    top: 20.5rem;
+    width: 40rem;
+    height: 40rem;
+  }
+  .footer {
+    padding: 9.4rem 16rem 8.8rem;
+  }
+  .footer .title {
+    font-size: 2rem;
+    line-height: 1.2em;
+  }
+  .headquarters address, .headquarters .description, .contacts address, .contacts .description {
+    font-size: 1.3rem;
+    line-height: 1.8em;
+    margin-top: 4rem;
+  }
+  .headquarters address, .contacts address {
+    width: 100%;
+  }
+  .contacts .title {
+    font-size: 3.4rem;
+    line-height: 1.3em;
+  }
+  .contacts .description {
+    width: 60%;
   }
 }
 /*# sourceMappingURL=style.css.map */
